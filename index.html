@@ -31,11 +31,14 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-md-auto">
                         <div class="logo">
-                            <img class="logo-image" src="img/logo.png" alt="Стройинвест">
+                            <img class="logo-image" src="img/investstroy.png" alt="Стройинвест">
                         </div>
                     </div>
                     <!-- /.col-md -->
                     <div class="col-md-auto">
+                        <button class="top-nav_btn">
+                            <i class="icon-menu fas fa-bars"></i>
+                        </button>
                         <ul class="top-nav-menu">
                             <li><a href="#">Главная</a></li>
                             <li><a href="#">О компании</a></li>
@@ -54,6 +57,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="left-side-bar">
+                        <div class="left-side-bar_btn">
+                            Категории
+                        </div>
                         <ul class="left-side-bar_menu">
                             <li><a href="#">Коммерческая недвижимость</a></li>
                             <li><a href="#">Новостройки</a></li>
@@ -116,7 +122,7 @@
                         <p>Ipsa quam magnam laboriosam! Dolorem voluptates omnis nemo minima magnam harum. Saepe in,
                             quia eligendi ad, quibusdam natus fuga dicta ex odio, omnis dolore. Odit error labore quasi
                             deleniti magnam.</p>
-                        <p>Dolorum repudiandae et eum atque nihil accusantium sit quo deleniti consectetur odit vero
+                        <p> repudiandae et eum atque nihil accusantium sit quo deleniti consectetur odit vero
                             modi, eaque ea adipisci amet blanditiis ab quisquam laboriosam inventore sunt omnis
                             dignissimos, a voluptates nobis! Temporibus.</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure expedita saepe in deleniti qui
@@ -182,7 +188,7 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-6">
                         <ul class="footer-menu">
                             <li><a href="#">Главная</a></li>
                             <li><a href="#">О компании</a></li>
@@ -192,7 +198,7 @@
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="col-md">
+                    <div class="col-md col-6">
                         <ul class="footer_menu">
                             <li><a href="#">Коммерческая недвижимость</a></li>
                             <li><a href="#">Новостройки</a></li>
@@ -241,7 +247,30 @@
                 arrows: false,
                 dots: true,
                 slidesToShow: 4,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                var menuBtn = $('.top-nav_btn');
+                var menu = $('.top-nav-menu');
+                var sidebarBtn = $('.left-side-bar_btn');
+                var sidebarMenu = $('.left-side-bar_menu');
+                menuBtn.on('click', function (event) {
+                    event.preventDefault(),
+                        menu.toggleClass('top-nav-menu__active');
+                });
+                sidebarBtn.on('click', function (event) {
+                    event.preventDefault(),
+                        sidebarMenu.toggleClass('left-side-bar_menu__active');
+                });
             });
         </script>
         <!-- <script id="__bs_script__">

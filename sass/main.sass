@@ -2,27 +2,29 @@
 @import "colors"
 // Перопределение стилей
 @import "reset"
+
 html
-    font-size: 14px
+    font-size: 10px
 
 body
     margin: 0
     background-color: $body-bg
     color: $dark
     font-family: 'Roboto', sans-serif
-    padding-top: 40px
+    padding-top: 4rem
+    font-size: 1.4rem
 
 a
     color: $active-color
 h2
-        font-size: 24px
+        font-size: 2.4rem
 .btn
-    padding: 20px 30px
+    padding: 2rem 3rem
     display: inline-block
     color: $white
     border-radius: 5px
     text-decoration: none
-    font-size: 16px
+    font-size: 1.6rem
     font-weight: 700
     &-primary
         background-color: $active-color
@@ -34,6 +36,19 @@ h2
 .top-nav
     background-color: $white
     padding: 15px
+    position: relative
+    &_btn
+        display: none
+        width: 40px
+        height: 40px
+        background-color: transparent
+        border: none
+        font-size: 18px
+        position: absolute
+        right: 15px
+        top: -50px
+        &:hover
+            cursor: pointer
     &-menu
         list-style: none
         padding: 0
@@ -51,18 +66,35 @@ h2
                     width: 100%
                     height: 2px
                     background-color: $active-color
-                    transform: translateY(30px) scale(0)
+                    transform: translateY(36px) scale(0)
                     transition: all .2s
                 &:hover
                     text-decoration: none
                     &::after
-                        transform: translateY(30px) scale(1)
+                        transform: translateY(36px) scale(1)
 .logo-image
-    max-width: 75px
+    max-width: 150px
 
 .left-side-bar
-    margin-top: 40px
-    
+    margin-top: 4rem
+    &_btn
+        display: none
+        background-color: $white
+        padding: 15px
+        position: relative
+        &:hover
+                cursor: pointer
+        &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 1
+            right: 15px
+            width: 15px
+            height: 15px
+            border-bottom: 2px solid $dark  
+            border-right: 2px solid $dark
+            transform: rotate(45deg)  
     &_menu
         list-style: none
         padding: 0
@@ -166,6 +198,9 @@ h2
                 &:hover
                     background-color: rgba($white, .9)
                     color: $dark
+
+// Import media sass
+@import "media"
 
     
         
