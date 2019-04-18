@@ -276,6 +276,103 @@ img
             line-height: 1.5
         p
             line-height: 2.2rem
+// Инвестиционные программы
+    // Оформление калькулятора
+.calc
+    h4
+        margin-top: 0
+        margin-bottom: 3rem
+    &-radio
+        flex-basis: 50%
+        &:last-child
+            flex-basis: 100%
+            display: flex
+
+    &-programms
+        display: flex
+        flex-wrap: wrap
+        label
+            display: inline-block
+            margin-bottom: 2rem
+            &:hover
+                    cursor: pointer
+            small
+                display: block
+                margin-left: 2.9rem
+                font-size: 1rem
+                opacity: .5
+            &::before
+                content: ''
+                display: inline-block
+                vertical-align: middle
+                //style for check
+                width: 2.4rem
+                height: 2.4rem
+                box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1)
+                background-color: $white
+                border: 6px solid $white
+                border-radius: 50%
+                transition: all .2s
+        input[type="radio"]
+            display: none //убрали стандартный радио
+            &:checked
+                &+label::before
+                    background-color: $active-color
+                    border: 6px solid $white
+    &-popular
+        width: 50%
+        height: 2.5rem
+        padding-left: 5px
+        padding-right: 5px
+        margin-left: 1.2rem
+        color: $white
+        display: flex
+        justify-content: center
+        align-items: center
+        line-height: 2.5rem
+        font-size: 1rem
+        text-transform: uppercase
+        background-color: $active-color
+        position: relative
+        &::before
+            content: ''
+            width: 6px
+            height: 13px
+            border: 6px solid transparent
+            border-right: 6px solid $active-color
+            position: absolute
+            left: -12px
+            top: 50%
+            margin-top: -6px
+    &-legal
+        font-size: 1.2rem
+    &-summ
+        &_invest
+            margin-top: 3rem
+            &_label
+                margin-right: 1rem
+            &_num
+                display: inline-block
+                padding: 1rem 4.8rem
+                background-color: $white
+                font-size: 1.8rem
+    &-total, &-monthly
+        margin-top: 2rem
+        display: inline-block
+        text-align: center
+        background-color: $white
+        padding: 1rem 1rem
+        margin-right: 2rem
+        strong
+            font-size: 1.8rem
+            color: $active-color
+            font-weight: 400
+        small
+            font-size: 1rem
+    &-monthly
+        background-color: transparent
+
+        
 
 
 

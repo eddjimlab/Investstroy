@@ -288,6 +288,110 @@ img {
   .organization-card p {
     line-height: 2.2rem; }
 
+.calc h4 {
+  margin-top: 0;
+  margin-bottom: 3rem; }
+.calc-radio {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; }
+  .calc-radio:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+.calc-programms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .calc-programms label {
+    display: inline-block;
+    margin-bottom: 2rem; }
+    .calc-programms label:hover {
+      cursor: pointer; }
+    .calc-programms label small {
+      display: block;
+      margin-left: 2.9rem;
+      font-size: 1rem;
+      opacity: 0.5; }
+    .calc-programms label::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 2.4rem;
+      height: 2.4rem;
+      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1);
+              box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1);
+      background-color: #fff;
+      border: 6px solid #fff;
+      border-radius: 50%;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
+  .calc-programms input[type="radio"] {
+    display: none; }
+    .calc-programms input[type="radio"]:checked + label::before {
+      background-color: #009adf;
+      border: 6px solid #fff; }
+.calc-popular {
+  width: 50%;
+  height: 2.5rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 1.2rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #009adf;
+  position: relative; }
+  .calc-popular::before {
+    content: "";
+    width: 6px;
+    height: 13px;
+    border: 6px solid transparent;
+    border-right: 6px solid #009adf;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    margin-top: -6px; }
+.calc-legal {
+  font-size: 1.2rem; }
+.calc-summ_invest {
+  margin-top: 3rem; }
+  .calc-summ_invest_label {
+    margin-right: 1rem; }
+  .calc-summ_invest_num {
+    display: inline-block;
+    padding: 1rem 4.8rem;
+    background-color: #fff;
+    font-size: 1.8rem; }
+.calc-total, .calc-monthly {
+  margin-top: 2rem;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  margin-right: 2rem; }
+  .calc-total strong, .calc-monthly strong {
+    font-size: 1.8rem;
+    color: #009adf;
+    font-weight: 400; }
+  .calc-total small, .calc-monthly small {
+    font-size: 1rem; }
+.calc-monthly {
+  background-color: transparent; }
+
 @media (max-width: 767px) {
   .top-nav_btn {
     display: block; }
@@ -327,7 +431,7 @@ img {
 @media (min-width: 800px) and (max-width: 1200px) {
   html {
     font-size: 8.8px; } }
-@media (min-width: 769px) and (max-width: 985px) {
+@media (min-width: 769px) and (max-width: 990px) {
   .top-nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -337,6 +441,8 @@ img {
             justify-content: space-between;
     font-size: 1.1rem; }
     .top-nav-menu li {
-      margin: 0.5rem; } }
+      margin: 0.5rem; }
 
-/*# sourceMappingURL=main.css.map */
+  .calc-popular {
+    font-size: 0.7rem;
+    padding: 0; } }
